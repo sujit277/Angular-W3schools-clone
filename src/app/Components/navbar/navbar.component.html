@@ -1,0 +1,164 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light"
+  style="padding: 0px 0px"
+>
+  <div class="container-fluid" style="padding: 0px 0px">
+    <img class="iconImage" src="../../../assets/Images/Navbar.jpg" alt="Icon" />
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item navitems">
+          <button class="nav-link box31" (click)="launchNavOptions()">
+            <strong>Tutorials</strong>
+          </button>
+        </li>
+        <li class="nav-item navitems">
+          <a class="nav-link" routerLink="/"><strong>References</strong></a>
+        </li>
+        <li class="nav-item navitems">
+          <a class="nav-link" routerLink="/"><strong>Excercise</strong></a>
+        </li>
+      </ul>
+      <div class="nav-item navitemsbuttons" *ngIf="!userName">
+        <button
+          type="button"
+          (click)="navigateToLoginPage()"
+          class="btn btn-success btncst"
+        >
+          <strong>Login</strong>
+        </button>
+      </div>
+      <div class="nav-item navitemsbuttons" *ngIf="userName">
+        <button type="button" class="btn btn-success btncst">
+          <strong>{{ userName }}</strong>
+        </button>
+      </div>
+      <div class="nav-item navitemsbuttons" *ngIf="userName">
+        <button type="button" class="btn btn-light btncst course" (click)="logout()">
+          <strong>Logout</strong>
+        </button>
+      </div>
+      <div class="nav-item navitemsbuttons">
+        <button type="button" class="btn btn-light btncst course">
+          <strong>Paid Courses</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div
+  class="row"
+  style="background-color: #282a35; display: visible"
+  *ngIf="navOptionsVisibility"
+>
+  <div class="col-sm-3" style="height: auto">
+    <div class="mt-5" style="padding-left: 50px">
+      <h3 style="color: #fff4a3">HTML and CSS</h3>
+      <h5 class="box32" (click)="navigateToContent()">Learn HTML</h5>
+      <h5 class="box32">Learn CSS</h5>
+      <h5 class="box32">Learn RWD</h5>
+      <h5 class="box32">Learn Boostrap</h5>
+      <h5 class="box32">Learn W3.CSS</h5>
+      <h5 class="box32">Learn Colors</h5>
+      <h5 class="box32">Learn Icons</h5>
+      <h5 class="box32">Learn Graphics</h5>
+      <h5 class="box32">Learn SVG</h5>
+      <h5 class="box32">Learn How to</h5>
+      <h5 class="box32">Learn Sass</h5>
+    </div>
+  </div>
+  <div class="col-sm-3" style="background-color: #282a35; display: visible">
+    <div class="mt-5" style="padding-left: 50px">
+      <h3 style="color: #fff4a3">JavaScript</h3>
+      <h5 class="box32">Learn JavaScript</h5>
+      <h5 class="box32">Learn JQuery</h5>
+      <h5 class="box32">Learn React</h5>
+      <h5 class="box32">Learn AngularJS</h5>
+      <h5 class="box32">Learn JSON</h5>
+      <h5 class="box32">Learn AJAX</h5>
+      <h5 class="box32">Learn AppML</h5>
+      <h5 class="box32">Learn W3.JS</h5>
+    </div>
+  </div>
+  <div class="col-sm-3" style="background-color: #282a35; display: visible">
+    <div class="mt-5" style="padding-left: 50px">
+      <h3 style="color: #fff4a3">Server Side</h3>
+      <h5 class="box32">Learn SQL</h5>
+      <h5 class="box32">Learn MYSQL</h5>
+      <h5 class="box32">Learn React</h5>
+      <h5 class="box32">Learn AngularJS</h5>
+      <h5 class="box32">Learn JSON</h5>
+      <h5 class="box32">Learn AJAX</h5>
+      <h5 class="box32">Learn AppML</h5>
+      <h5 class="box32">Learn W3.JS</h5>
+    </div>
+  </div>
+  <div class="col-sm-3" style="background-color: #282a35; display: visible">
+    <div class="mt-5" style="padding-left: 50px">
+      <h3 style="color: #fff4a3">Data Analytics</h3>
+      <h5 class="box32">Learn AI</h5>
+      <h5 class="box32">Learn Machine Learning</h5>
+      <h5 class="box32">Learn Data Science</h5>
+      <h5 class="box32">Learn Numpy</h5>
+      <h5 class="box32">Learn Pandas</h5>
+      <h5 class="box32">Learn Scipy</h5>
+      <h5 class="box32">Learn Matplotlib</h5>
+      <h5 class="box32">Learn Statistics</h5>
+      <h5 class="box32">Learn Excel</h5>
+      <h5 class="box32">Learn Google Sheets</h5>
+    </div>
+  </div>
+  <div class="col-sm-3" style="background-color: #282a35; display: visible">
+    <div class="mt-5 mb-5" style="padding-left: 50px">
+      <h3 style="color: #fff4a3">Programming</h3>
+      <h5 class="box32">Learn Python</h5>
+      <h5 class="box32">Learn JavaScript</h5>
+      <h5 class="box32">Learn C</h5>
+      <h5 class="box32">Learn C++</h5>
+      <h5 class="box32">Learn C#</h5>
+      <h5 class="box32">Learn R</h5>
+      <h5 class="box32">Learn Kotlin</h5>
+      <h5 class="box32">Learn Go</h5>
+      <h5 class="box32">Learn Django</h5>
+      <h5 class="box32">Learn Typecript</h5>
+    </div>
+  </div>
+
+  <div class="col-sm-3" style="background-color: #282a35; display: visible">
+    <div class="mt-5 mb-5" style="padding-left: 50px">
+      <h3 style="color: #fff4a3">Web Building</h3>
+      <h5 class="box32">Create a Website</h5>
+      <h5 class="box32">Where to Start</h5>
+      <h5 class="box32">Web Templates</h5>
+      <h5 class="box32">Web Statistics</h5>
+      <h5 class="box32">Web Certificates</h5>
+      <h5 class="box32">Web Development</h5>
+      <h5 class="box32">Code Editor</h5>
+      <h5 class="box32">Test Your Typing</h5>
+      <h5 class="box32">Play a Code Game</h5>
+    </div>
+  </div>
+
+  <div class="col-sm-3" style="background-color: #282a35; display: visible">
+    <div class="mt-5 mb-5" style="padding-left: 50px">
+      <h3 style="color: #fff4a3">XML Tutorials</h3>
+      <h5 class="box32">Learn XML</h5>
+      <h5 class="box32">Learn XML AJAX</h5>
+      <h5 class="box32">Learn XML DOM</h5>
+      <h5 class="box32">Learn XML DTD</h5>
+      <h5 class="box32">Learn XML Schema</h5>
+      <h5 class="box32">Learn XPath</h5>
+    </div>
+  </div>
+</div>
+<app-main></app-main>

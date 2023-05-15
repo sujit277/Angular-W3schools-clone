@@ -1,0 +1,56 @@
+<div class="box57">
+  <div class="mb-2" style="height: 55px">
+    <img class="iconImage" src="../../../assets/Images/Navbar.jpg" alt="Icon" />
+  </div>
+  <div class="box52">
+    <div class="col-md-5 box53">
+      <h3 style="margin-bottom: 19px"><strong>Sign Up</strong></h3>
+      <form [formGroup]="signUpForm">
+        <div class="mb-3">
+          <label htmlFor="name" class="form-label"
+            ><strong>Name</strong
+            ><span class="box16"
+              >Already have an Account?
+              <a routerLink="/login" style="color: green">Sign in</a></span
+            ></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label htmlFor="email" class="form-label"
+            ><strong>Email</strong></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            formControlName="email"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label htmlFor="password" class="form-label"
+            ><strong>Password</strong></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="password"
+            formControlName="password"
+          />
+        </div>
+        <div class="mb-3 box54">
+          <button type="button" class="btn btn-success loginButton" (click)="signup()">
+            <strong>Signup</strong>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

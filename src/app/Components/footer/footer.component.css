@@ -1,0 +1,21 @@
+.box28 {
+  border-radius: 25px;
+  background-color: #099460;
+  color: white;
+  width: 200px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.box10 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .box10 {
+    display: block;
+    text-align: center;
+  }
+}

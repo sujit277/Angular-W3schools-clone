@@ -1,0 +1,51 @@
+<div class="box11">
+  <div class="mb-2" style="height: 55px">
+    <img class="iconImage" src="../../../assets/Images/Navbar.jpg" alt="Icon" />
+  </div>
+  <div class="box12">
+    <div class="col-md-5 box13">
+      <h3 style="margin-bottom: 19px"><strong>Log in</strong></h3>
+      <form [formGroup]="loginForm">
+        <div class="mb-3">
+          <label htmlFor="emailLogin" class="form-label"
+            ><strong>Email</strong
+            ><span class="box16"
+              >Need and Account?
+              <a routerLink="/signup" style="color: green">Sign up</a></span
+            ></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="emailLogin"
+            formControlName="emailLogin"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label htmlFor="passwordLogin" class="form-label"
+            ><strong>Password</strong></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="passwordLogin"
+            formControlName="passwordLogin"
+          />
+        </div>
+        <div class="mb-3 box14">
+          <button
+            type="button"
+            class="btn btn-success loginButton"
+            (click)="login()"
+          >
+            <strong>Log in</strong>
+          </button>
+        </div>
+        <div class="box15">
+          <a routerLink="/" style="color: black">Forget Password</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
